@@ -4,13 +4,13 @@ Created on Thu Nov 26 15:50:15 2020
 
 @author: berkant tuğberk
 """
-
+#Importing libraries
 import cv2
 import face_recognition
 import numpy as np
 import os
 
-
+#The function for finding encodings of the faces
 def findEncodings(images):
     encodeList=[]
     
@@ -26,7 +26,7 @@ path= "C:/Users/tugberk/Desktop/python/faceRecog/images"
 images = []
 names=[]
 mylist = os.listdir(path)
-
+#Parse the file and find the encodings of the face. If you upload more images in images file, the image will be recognized.
 for list in mylist:
     currentImage=cv2.imread(f'{path}/{list}')
     images.append(currentImage)
